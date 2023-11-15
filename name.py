@@ -1,7 +1,6 @@
 import streamlit as st
-from PIL import Image, ImageOps
+from PIL import Image
 from keras.applications.vgg16 import VGG16, preprocess_input
-import cv2
 import numpy as np
 import joblib
 
@@ -19,8 +18,9 @@ c1, c2= st.columns(2)
 
 if upload is not None:
   im= Image.open(upload)
-  img= np.asarray(im)
-  image= cv2.resize(img,(224, 224))
+  
+  img= im.resize((224, 224))
+  image= np.asarray(img)
   img= preprocess_input(image)
   img= np.expand_dims(img, 0)
   c1.header('Input Image')
