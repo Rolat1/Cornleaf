@@ -28,10 +28,7 @@ if upload is not None:
   # c1.write(img.shape)
 
 
-  # Load the VGG16 model
-  weights_path = '/Users/macbookpro/Downloads/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5'
-
-  vgg16_model = VGG16(weights=weights_path, include_top=False)
+  vgg16_model = VGG16(weights='imagenet', include_top=False)
 
   # Extract features using the VGG16 model
   features = vgg16_model.predict(img)
