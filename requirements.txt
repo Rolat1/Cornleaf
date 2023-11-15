@@ -1,0 +1,6 @@
+streamlit==1.28.2
+numpy==1.24.3
+keras==2.14.0
+pillow==9.5.0
+cv2==4.8.1
+joblib==1.2.0
