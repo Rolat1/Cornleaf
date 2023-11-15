@@ -1,5 +1,6 @@
 streamlit==1.28.2
 numpy==1.24.3
 tensorflow==2.14.0
+sklearn==1.2.2
 pillow==9.5.0
 joblib==1.2.0
